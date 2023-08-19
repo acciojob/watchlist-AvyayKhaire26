@@ -51,7 +51,7 @@ public class MovieController {
     }
 
     @GetMapping("/get-all-movies")
-    public ResponseEntity<List<String>> getAllMovies() {
+    public ResponseEntity<List<String>> findAllMovies() { // renamed findAllMovies because of accio test cases
         List<String> movies = movieService.getAllMovieNames();
         return ResponseEntity.ok(movies);
     }
